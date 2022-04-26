@@ -18,10 +18,11 @@ In the sub-directory Azure Components_Azure Functions
 you can run:
 
 ### `func start`
+
 Note: You need to have a valid azure license to run this command.
 
 Runs the app in the development mode.\
 Open [http://localhost:5000](http://localhost:5000) to view it in your browser.
 
 The page will reload when you make changes.\
-You may also see any lint errors in the console."# CINEMATRIX" 
+You may also see any lint errors in the console."# CINEMATRIX"
