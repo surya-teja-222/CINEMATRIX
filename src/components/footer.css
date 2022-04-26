@@ -1,0 +1,48 @@
+/* for pc view */
+
+@media (min-width: 1040px) {
+  .grid-f {
+    display: grid;
+    grid-template-columns: 1fr 40% 1fr;
+    width: 100%;
+  }
+}
+@media (max-width: 1040px) {
+  .grid-f {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-b {
+    font-size: calc(1rem + ((1vw - 7.68px) * 0.6944));
+    min-height: 0vw;
+  }
+}
+@media (min-width: 1920px) {
+  .footer-b {
+    font-size: 24px;
+  }
+}
+
+.test {
+  display: inline-block;
+}
+.test:hover {
+  animation: test-an 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+@keyframes test-an {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.mob-bot {
+  grid-row: span 1/-1;
+}

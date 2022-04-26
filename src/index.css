@@ -1,0 +1,226 @@
+/* TAILWIND */
+@import-normalize;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* FONT FAMILIES */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");
+
+@layer utilities {
+  .transition-gen {
+    @apply transition-all duration-500 ease-in-out;
+  }
+}
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
+html {
+  scrollbar-width: thin;
+}
+
+html::-webkit-scrollbar {
+  width: 1vw;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: rgba(160, 150, 150, 0.333);
+}
+html::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    45deg,
+    rgba(160, 150, 150, 0.333) 0%,
+    rgb(192, 102, 102) 50%,
+    rgba(77, 69, 69, 0.333) 100%
+  );
+}
+html::-webkit-scrollbar-track {
+  background-color: #555;
+}
+
+::-moz-selection {
+  background: rgb(240, 240, 86);
+  color: #333;
+}
+
+::selection {
+  background: rgb(240, 240, 86);
+  color: #333;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.carousel {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 500ms;
+}
+
+.slide > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.shad {
+  text-shadow: 0px 8px 8px rgba(22, 21, 21, 0.274);
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.sp-t {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.slide-fwd-center:hover {
+  animation: slide-fwd-center 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-fwd-center {
+  0% {
+    transform: translateZ(0);
+  }
+  100% {
+    transform: translateZ(160px);
+  }
+}
+
+.terms {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.mstar {
+  transition: all 0.5s ease-in-out;
+}
+
+@keyframes waviy {
+  0%,
+  40%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-20px);
+  }
+}
+
+.abody {
+  overflow: hidden;
+  transition: max-height 1s ease-in-out;
+  height: auto;
+  /* max-height:600px;  */
+}
+
+/* .cus {
+  background-color: #7895c0;
+  background-image: linear-gradient(315deg, #33517e 0%, #5c7396 74%);
+} */
+
+/* .cus {
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+} */
+
+.cus {
+  /* background-image: url(./assets//hm/123.jpg); */
+  /* opacity: 0.5; */
+  /* filter: blur(2px); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(./assets/hm/123.gif);
+  background-size: auto;
+}
+
+/* .hmm {
+  background: rgba(30, 14, 14, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+} */
+
+@supports (backdrop-filter: blur(16px)) {
+  .hmm {
+    background: rgba(30, 14, 14, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+}
+
+/* .hmm {
+  backdrop-filter: blur(6px) saturate(190%);
+  -webkit-backdrop-filter: blur(6px) saturate(190%);
+  background-color: rgba(27, 6, 6, 0.61);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+} */
+
+/* on hover over surya-img , make .surya visible */
+
+.l-bg {
+  background: linear-gradient(
+      90.46deg,
+      rgba(132, 216, 118, 0.2) 1.2%,
+      rgba(0, 252, 252, 0.2) 52.15%,
+      rgba(255, 80, 80, 0.2) 99.04%
+    ),
+    rgba(11, 6, 6, 0.85);
+}
