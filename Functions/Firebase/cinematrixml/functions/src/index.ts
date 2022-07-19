@@ -12,9 +12,7 @@ const app = express();
 app.use(cors({ origin: true }));
 
 (async () => {
-  await mongooose.connect(
-    "mongodb+srv://admin:admin@cluster0.xbzj4.mongodb.net/cinematrix?retryWrites=true&w=majority"
-  );
+  await mongooose.connect(process.env.MONGO_URI);
 })();
 
 async function handleRequest(
@@ -28,9 +26,7 @@ async function handleRequest(
     // check if mongoose us still connected
     if (mongooose.connection.readyState !== 1) {
       (async () => {
-        await mongooose.connect(
-          "mongodb+srv://admin:admin@cluster0.xbzj4.mongodb.net/cinematrix?retryWrites=true&w=majority"
-        );
+        await mongooose.connect(process.env.MONGO_URI);
       })();
     }
 
