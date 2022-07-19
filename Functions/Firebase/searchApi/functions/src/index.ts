@@ -10,7 +10,7 @@ const app = express();
 
 // configure cors
 // set access control allow origin to cinematrix.subzeroo.tech
-app.use(cors({origin: "*"}));
+app.use(cors({ origin: "*" }));
 
 app.get("/", async (req, res) => {
   // checking if the database is connected
@@ -33,10 +33,10 @@ app.get("/", async (req, res) => {
 
   // get the movie from the database
   const movies = await schema
-      .find({
-        movie: {$regex: movie, $options: "i"},
-      })
-      .limit(5);
+    .find({
+      movie: { $regex: movie, $options: "i" },
+    })
+    .limit(5);
 
   // from movies array, get only movie name and store in array
   const movieNames = movies.map((movie) => movie.movie);

@@ -4,7 +4,6 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 
-
 // //  sentry error reporting
 /*
 // import * as Sentry from "@sentry/react";
@@ -47,8 +46,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const performance = getPerformance(app);
-
-
 
 ReactDOM.render(
   <React.StrictMode>

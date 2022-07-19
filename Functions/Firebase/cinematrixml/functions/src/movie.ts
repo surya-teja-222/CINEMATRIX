@@ -1,5 +1,4 @@
-import * as mongoose from 'mongoose';
-
+import * as mongoose from "mongoose";
 
 const movieData = new mongoose.Schema({
   name: {
