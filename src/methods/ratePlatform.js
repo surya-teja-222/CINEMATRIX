@@ -1,6 +1,6 @@
 export default async function ratePlatform(rating) {
     // console.log(`Rating platform with ${rating} stars`);
-    const url = `${process.env.REACT_APP_FEEDBACKURL}/platform`;
+    const url = `${process.env.REACT_APP_FEEDBACKURL}app`;
 
     // get last character of rating
     const lastChar = rating.slice(-1);

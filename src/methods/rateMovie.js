@@ -1,6 +1,6 @@
 export default async function rateMovie(movieName, rating) {
     // console.log(`Rating movie ${movieName} with ${rating} stars`);
-    const url = `${process.env.REACT_APP_FEEDBACKURL}/movie`;
+    const url = `${process.env.REACT_APP_FEEDBACKURL}movie`;
 
     // get last character of rating
     const lastChar = rating.slice(-1);

@@ -49,7 +49,7 @@ export default function Footer() {
                   </span>{" "}
                   and{" "}
                   <span className="test cursor-pointer text-[#FF1516] hover:underline">
-                    Bhanu
+                    Sasi
                   </span>
                 </p>
               </div>
@@ -57,7 +57,7 @@ export default function Footer() {
                 <p className="unselectable text-center text-[#827F7F]">
                   Designed by{" "}
                   <span className="test cursor-pointer text-[#FF1516] hover:underline">
-                    Pradhyumna
+                    Harsha
                   </span>
                 </p>
               </div>
